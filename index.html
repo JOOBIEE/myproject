@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse - Data Dashboard</title>
+    <meta name="description" content="Interactive inflation data dashboard for African countries">
+    <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+              <div class="logo-container">
+            <img src="pulse-logo.png" alt="Pulse Logo">
+            <p>..Where data comes alive..</p>
+  </div>
+        </header>
+        <hr>
+
+        <section id="filter" aria-labelledby="filter-heading">
+            <h2 id="filter-heading">Select information</h2>
+            <div class="filter-container">
+                <div class="filter-card">
+                    <h3>
+                        <label for="yearfilter">Year</label>
+                    </h3>
+                    <div class="filter-control" data-filter-type="range">
+                         <select id="yearfilter" aria-label="Filter by year">
+                            <option value="All">All Years</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                        </select>
+                    </div>
+                </div>
+                 <div class="filter-card">
+                    <h3>
+                        <label for="countryfilter">Country</label>
+                    </h3>
+                    <div class="filter-control" data-filter-type="dropdown">
+                        <select id="countryfilter" aria-label="Filter by country">
+                            <option value="All">All Countries</option>
+                            <option value="Nigeria">Nigeria</option>
+                            <option value="Ghana">Ghana</option>
+                            <option value="Cote d'voire">Cote d'voire</option>
+                            <option value="Senegal">Senegal</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="insights" aria-labelledby="insights-heading">
+            <h2 id="insights-heading">Insights</h2>
+            <div class="insights-container">
+                
+                <div class="insights-card">
+                    <h3>Trends</h3>
+                    <p class="insights-value" id="trend" aria-live="polite">--</p>
+                </div>
+                
+                <div class="insights-card">
+                    <h3>Current Inflation Rate</h3>
+                    <p class="insights-value" id="current-rate" aria-live="polite">--</p>
+                </div>
+
+                  <div class="insights-card">
+                    <h3>Highest Rate</h3>
+                    <p class="insights-value" id="highest-rate" aria-live="polite">--</p>
+                </div>
+                  <div class="insights-card">
+                    <h3>Lowest Rate</h3>
+                    <p class="insights-value" id="lowest-rate" aria-live="polite">--</p>
+                </div>
+
+              <div class="insights-card">
+                    <h3>Average</h3>
+                    <p class="insights-value" id="average-rate" aria-live="polite">--</p>
+                </div>
+
+                <div class="insights-card">
+                    <h3>Summary</h3>
+                    <p class="insights-value" id="summary" aria-live="polite">--</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="data" aria-labelledby="data-heading">
+            <h2 id="data-heading">Data Table</h2>
+            <div class="table-wrapper">
+            <table class="data-table">
+  <caption>Inflation Data by Country and Year</caption>
+  
+  <thead>
+    <tr>
+      <th scope="col">Country</th>
+      <th scope="col">Year</th>
+      <th scope="col">Inflation Rate (%)</th>
+      <th scope="col">Change from Previous Year (%)</th>
+      <th scope="col">Data Source</th>
+    </tr>
+  </thead>
+
+ <tbody id="dataList">
+ 
+</tbody>
+</table>
+</div>
+        </section>
+
+<section id="chart" aria-labelledby="chart-heading">
+  <h2 id="chart-heading">Inflation Trend</h2>
+  <div id="chartContainer" role="img" aria-label="Bar chart showing inflation trends"></div>
+</section>
+
+            <footer>
+        <p>&copy; 2025 PULSE | Designed by Joobie</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    </body>
+</html>
